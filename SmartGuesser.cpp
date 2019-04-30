@@ -11,10 +11,9 @@ string SmartGuesser:: guess()
 		for(int i=0; i<this->length;i++)
 			ans=ans +x;
 		count++;
-		cout<< theNumbers<<"fffff"<<endl;
 		return ans;
 	}
-	
+	return "";
 }
 
 void SmartGuesser:: learn(string reply)
@@ -29,10 +28,9 @@ void SmartGuesser:: learn(string reply)
 			break;
 	}
 	b= reply.substr(0,i);
-	cout<<reply<<"ddd"<<endl;
-	cout << b<<endl;
+	
 	p= reply.substr(i+1,reply.length()-1);
-	cout << p<<"fff"<<endl;
+	
 	stringstream geek(b); 
 	stringstream geek2(p); 
 	geek >> bull;
