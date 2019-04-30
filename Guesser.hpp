@@ -35,10 +35,9 @@ namespace bullpgia{
 						break;
 				}
 				b= reply.substr(0,i);
-				cout<<reply<<"ddd"<<endl;
-				cout << b<<endl;
+				
 				p= reply.substr(i+1,reply.length()-1);
-				cout << p<<"fff"<<endl;
+			
 				stringstream geek(b); 
 				stringstream geek2(p); 
 				geek >> bull;
