@@ -47,7 +47,7 @@ void SmartGuesser:: learn(string reply)
 		{
 			theNumbers=theNumbers+x;
 		}
-		if(bull==0 && gg=="9999")
+		if(bull==0&& gg.at(0)=='9')
 		{
 			string temp="";
 			wrong='0'+count-1;
@@ -55,6 +55,7 @@ void SmartGuesser:: learn(string reply)
 				temp=temp+wrong;
 			gg=temp;
 		}
+		
 		
 	}
 	else
