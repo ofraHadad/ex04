@@ -58,6 +58,15 @@ void SmartGuesser:: learn(string reply)
 		
 		
 	}
+	else if(wrong=='9'&&theNumbers.at(length-1)=='9')
+	{
+		gg="";
+		for (uint i=0; i<this->length; ++i) {
+			char c = '0' + (rand()%10);
+			gg += c;
+		}
+	
+	}
 	else
 	{
 	

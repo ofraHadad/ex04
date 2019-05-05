@@ -56,7 +56,7 @@ int main() {
 		for (uint i=0; i<100; ++i) {
 			testcase.CHECK_EQUAL(smarty.length,4);
 			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=100, true);// smarty should always win in at most 10 turns! 
-			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=20, true);//our algoritem shuld work after 20 times
+			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=21, true);//our algoritem shuld work after 20 times
 			
 		}
 		
