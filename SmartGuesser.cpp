@@ -15,7 +15,6 @@ string SmartGuesser:: guess()
 	}
 	else
 	{
-		cout<< gg<<endl;
 		return gg;
 	}
 	
@@ -73,7 +72,6 @@ void SmartGuesser:: learn(string reply)
 		if(bull==index+1)
 		{
 			index++;
-			cout<<"ssdsd"<<bull<<endl;
 			index2=0;
 		}
 		if(index2!=0)
@@ -84,9 +82,7 @@ void SmartGuesser:: learn(string reply)
 		}
 		while(gg.at(index2)!=wrong)
 		{
-			cout<<"gggg"<<endl;
 			index2++;
-			cout<<index2<<endl;
 		}
 		if(index2==0)
 			gg=theNumbers.at(index)+gg.substr(index2+1,gg.length()-1);
