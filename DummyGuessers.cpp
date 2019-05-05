@@ -7,5 +7,6 @@ std::string RandomGuesser::guess() {
 		char c = '0' + (rand()%10);
 		r += c;
 	}
+
 	return r;
 }
