@@ -22,7 +22,7 @@ namespace bullpgia{
 			int length;
 			
 			
-			void startNewGame(int l){
+			virtual void startNewGame(int l){
 				length=l;
 			}
 			virtual void learn(string reply){
