@@ -6,6 +6,10 @@ namespace bullpgia{
 	
 	class SmartGuesser: public Guesser{
 	public:
+	char wrong='9';
+	string gg="9999";
+	int index=0;
+	int index2=0;
 	string guess() override;
 	void learn(string reply) override;
 

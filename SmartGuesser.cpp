@@ -5,7 +5,7 @@ using namespace bullpgia;
 string SmartGuesser:: guess()
 {
 	char x=('0'+count);
-	if(theNumbers.length()<=this->length)
+	if(theNumbers.length()<this->length)
 	{
 		string ans="";
 		for(int i=0; i<this->length;i++)
@@ -13,7 +13,12 @@ string SmartGuesser:: guess()
 		count++;
 		return ans;
 	}
-	return "";
+	else
+	{
+		cout<< gg<<endl;
+		return gg;
+	}
+	
 }
 
 void SmartGuesser:: learn(string reply)
@@ -36,11 +41,52 @@ void SmartGuesser:: learn(string reply)
 	geek >> bull;
 	geek2>> pgia;
 	
-	if(theNumbers.length()<=this->length)
+	if(theNumbers.length()<this->length)
 	{
 		for(int j=0; j<this->bull; j++)
 		{
 			theNumbers=theNumbers+x;
 		}
+		if(bull==0 && gg=="9999")
+		{
+			string temp="";
+			wrong='0'+count-1;
+			for(int j=0; j<this->length; j++)
+				temp=temp+wrong;
+			gg=temp;
+		}
+		
 	}
+	else
+	{
+	
+		if(bull==index+1)
+		{
+			index++;
+			cout<<"ssdsd"<<bull<<endl;
+			index2=0;
+		}
+		if(index2!=0)
+		{
+			
+			gg=gg.substr(0,index2-1)+wrong + gg.substr(index2,gg.length()-1);
+			
+		}
+		while(gg.at(index2)!=wrong)
+		{
+			cout<<"gggg"<<endl;
+			index2++;
+			cout<<index2<<endl;
+		}
+		if(index2==0)
+			gg=theNumbers.at(index)+gg.substr(index2+1,gg.length()-1);
+		
+		else if(index2==gg.length()-1)
+				gg=gg.substr(0,index2)+theNumbers.at(index);
+		else
+			gg=gg.substr(0,index2)+theNumbers.at(index)+gg.substr(index2+1,gg.length()-1);
+		index2++;
+
+	}
+		
 }
